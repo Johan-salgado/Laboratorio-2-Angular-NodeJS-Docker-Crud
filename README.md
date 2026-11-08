@@ -7,8 +7,6 @@ API REST desarrollada con Node.js, Express y TypeScript que usa PostgreSQL como 
 ## Integrantes
 
 - Johan Eliu Salgado Castro (230232033)
-- Nombre del integrante 2 (código)
-- Nombre del integrante 3 (código)
 
 ## Tecnologías
 
