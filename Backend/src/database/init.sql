@@ -27,3 +27,12 @@ CREATE TABLE IF NOT EXISTS teachers (
     experience INTEGER NOT NULL CHECK (experience BETWEEN 0 AND 60),
     status BOOLEAN DEFAULT TRUE
 );
+
+CREATE TABLE IF NOT EXISTS classrooms (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    building VARCHAR(100) NOT NULL,
+    capacity INTEGER NOT NULL CHECK (capacity BETWEEN 1 AND 200),
+    projector BOOLEAN DEFAULT FALSE,
+    status BOOLEAN DEFAULT TRUE
+);

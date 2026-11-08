@@ -85,3 +85,31 @@ INSERT INTO teachers (
 
 ('Natalia Giraldo Duque', 'natalia.giraldo@gmail.com', '3210001122', 'Estadística y Simulación', 9, TRUE)
 ON CONFLICT DO NOTHING;
+
+INSERT INTO classrooms (
+    name,
+    building,
+    capacity,
+    projector,
+    status
+) VALUES
+('Aula 101', 'Bloque A', 30, TRUE, TRUE),
+
+('Aula 102', 'Bloque A', 35, TRUE, TRUE),
+
+('Aula 201', 'Bloque A', 40, FALSE, TRUE),
+
+('Aula 202', 'Bloque A', 40, TRUE, TRUE),
+
+('Aula 301', 'Bloque B', 45, TRUE, TRUE),
+
+('Laboratorio de Sistemas 1', 'Bloque B', 25, TRUE, TRUE),
+
+('Laboratorio de Sistemas 2', 'Bloque B', 25, TRUE, TRUE),
+
+('Laboratorio de Redes', 'Bloque C', 20, FALSE, TRUE),
+
+('Sala de Conferencias', 'Bloque C', 80, TRUE, TRUE),
+
+('Auditorio Principal', 'Bloque D', 150, TRUE, TRUE)
+ON CONFLICT DO NOTHING;
