@@ -56,3 +56,32 @@ INSERT INTO courses (
 
 ('Inteligencia Artificial', 'Fundamentos de inteligencia artificial, aprendizaje automático y algoritmos inteligentes.', 4, 8, TRUE)
 ON CONFLICT DO NOTHING;
+
+INSERT INTO teachers (
+    name,
+    email,
+    phone,
+    specialty,
+    experience,
+    status
+) VALUES
+('Carlos Andres Vargas', 'carlos.vargas@gmail.com', '3201112233', 'Bases de Datos', 8, TRUE),
+
+('Marcela Ospina Rios', 'marcela.ospina@gmail.com', '3202223344', 'Ingeniería de Software', 12, TRUE),
+
+('Jorge Enrique Salazar', 'jorge.salazar@gmail.com', '3203334455', 'Redes de Computadores', 15, TRUE),
+
+('Paola Andrea Cardona', 'paola.cardona@gmail.com', '3204445566', 'Programación Web', 6, TRUE),
+
+('Luis Fernando Marin', 'luis.marin@gmail.com', '3205556677', 'Sistemas Operativos', 10, TRUE),
+
+('Diana Carolina Restrepo', 'diana.restrepo@gmail.com', '3206667788', 'Inteligencia Artificial', 7, TRUE),
+
+('Hernan Dario Mejia', 'hernan.mejia@gmail.com', '3207778899', 'Arquitectura de Software', 18, TRUE),
+
+('Sandra Milena Ortiz', 'sandra.ortiz@gmail.com', '3208889900', 'Matemáticas', 14, TRUE),
+
+('Felipe Alejandro Cruz', 'felipe.cruz@gmail.com', '3209990011', 'Desarrollo de Aplicaciones Móviles', 4, TRUE),
+
+('Natalia Giraldo Duque', 'natalia.giraldo@gmail.com', '3210001122', 'Estadística y Simulación', 9, TRUE)
+ON CONFLICT DO NOTHING;
