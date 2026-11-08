@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { ClassroomRoutes } from "./modules/classroom/classroom.routes";
 import { CourseRoutes } from "./modules/course/course.route";
 import { StudentRoutes } from "./modules/student/student.routes";
 import { TeacherRoutes } from "./modules/teacher/teacher.routes";
@@ -12,6 +13,7 @@ export class AppRoutes {
     apiRouter.use("/students", StudentRoutes.routes);
     apiRouter.use("/courses", CourseRoutes.routes);
     apiRouter.use("/teachers", TeacherRoutes.routes);
+    apiRouter.use("/classrooms", ClassroomRoutes.routes);
 
     router.use("/api", apiRouter);
 
