@@ -1,0 +1,137 @@
+<app-back />
+<div class="container-fluid mt-3">
+
+    <div class="mb-4">
+        <h3 class="fw-bold mb-1">Detalle del salón</h3>
+        <p class="text-muted mb-0">
+            Información general y de uso del salón.
+        </p>
+    </div>
+
+    @if (classroom) {
+
+        <div class="card border mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center gap-3">
+
+                    <div class="rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center"
+                         style="width: 65px; height: 65px; font-size: 2rem;">
+                        <i class="bi bi-door-open-fill"></i>
+                    </div>
+
+                    <div class="flex-grow-1">
+                        <h4 class="fw-bold mb-1">{{ classroom.name }}</h4>
+                        <span class="text-muted">Salón #{{ classroom.id }}</span>
+                    </div>
+
+                    @if (classroom.status) {
+                        <span class="badge rounded-pill text-bg-success">Activo</span>
+                    } @else {
+                        <span class="badge rounded-pill text-bg-danger">Inactivo</span>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-lg-7">
+                <div class="card border h-100">
+
+                    <div class="card-header bg-white py-3">
+                        <h5 class="fw-semibold mb-0">
+                            <i class="bi bi-building text-primary me-2"></i>
+                            Información general
+                        </h5>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <div class="row g-4">
+
+                            <div class="col-12">
+                                <small class="text-muted d-block mb-1">Nombre del salón</small>
+                                <span class="fw-medium">{{ classroom.name }}</span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <small class="text-muted d-block mb-1">Bloque</small>
+                                <span>
+                                    <i class="bi bi-geo-alt text-secondary me-2"></i>
+                                    {{ classroom.building }}
+                                </span>
+                            </div>
+
+                            <div class="col-md-6">
+                                <small class="text-muted d-block mb-1">Capacidad</small>
+                                <span>
+                                    <i class="bi bi-people text-secondary me-2"></i>
+                                    {{ classroom.capacity }} personas
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+                <div class="card border h-100">
+
+                    <div class="card-header bg-white py-3">
+                        <h5 class="fw-semibold mb-0">
+                            <i class="bi bi-tools text-primary me-2"></i>
+                            Recursos y estado
+                        </h5>
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <div class="mb-4">
+                            <small class="text-muted d-block mb-2">Proyector</small>
+                            @if (classroom.projector) {
+                                <span class="badge text-bg-primary">
+                                    <i class="bi bi-projector me-1"></i>
+                                    Cuenta con proyector
+                                </span>
+                            } @else {
+                                <span class="badge text-bg-secondary">
+                                    <i class="bi bi-x-circle me-1"></i>
+                                    Sin proyector
+                                </span>
+                            }
+                        </div>
+
+                        <hr>
+
+                        <div>
+                            <small class="text-muted d-block mb-2">Estado del salón</small>
+                            @if (classroom.status) {
+                                <span class="badge text-bg-success">
+                                    <i class="bi bi-check-circle me-1"></i>
+                                    Activo
+                                </span>
+                            } @else {
+                                <span class="badge text-bg-danger">
+                                    <i class="bi bi-x-circle me-1"></i>
+                                    Inactivo
+                                </span>
+                            }
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    } @else {
+
+        <div class="alert alert-warning">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            No se encontró información del salón.
+        </div>
+
+    }
+
+</div>
