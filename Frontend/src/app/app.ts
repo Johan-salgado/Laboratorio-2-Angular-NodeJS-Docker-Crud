@@ -12,5 +12,6 @@ export class App {
   navbarItems: NavbarItem[] = [
     { title: 'Students', url: '/students' },
     { title: 'Teachers', url: '/teachers' },
+    { title: 'Classrooms', url: '/classrooms' },
   ];
 }
